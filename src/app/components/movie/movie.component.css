@@ -1,0 +1,21 @@
+.font{
+    color: white;
+    font-size: 20px;
+}
+
+.background {
+    background-color: crimson;
+    width: 350px;
+    height: 100px;
+}
+
+.textColor {
+    color: white;
+    font-size: 20px;
+}
+
+.bgContent {
+    background-color:#0000FF;
+    width: 350px;
+    height: 100px;
+}

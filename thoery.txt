@@ -1,0 +1,408 @@
+Angular  (01/10/2020)
+--------
+Angular is a developement platform for building a single page application for mobile and desktop
+
+It uses typescript & HTML to build apps
+
+Angular is written usig the typescript
+
+It comes with features like component, directives, Forms, pipes, services, dependency Injection etc.
+
+Angular js  ( First version of Angular)
+
+Angular Versions
+------------------
+Earlier version of angular was named as Angular 2 later it was renamed as Angular (2 to 10)
+
+Latest version is 10.1.3 as of today (01/10/2020)
+
+Angular is developed and maintained by Google. 
+
+It has large community with which we can find help on web easily.
+
+Features of Angular
+-------------------
+1. Two-way Data Binding
+--------------------------
+
+1. It is automatic and very fast
+2. Changes made to the view is automatically updated in the component class and vice versa
+
+
+2. Powerful Routing Support
+------------------------------
+The Angular powerful rotuing engine loads the page asynchronously on the same page 
+enabling us to create a single page application
+
+3. Expressive HTML
+-------------------
+Angular enables us to use programming constructs like if conditions, foor loop etc.. 
+to render and control how the HTML pages work or look like.
+
+4. Modular by Design
+---------------------
+Angular follows Modular design. We can create Angular modules to better organize and manage our codebase.
+
+
+Setup Environment
+---------------------
+1. Visual Studio Code ( you can pick any pther code editor)
+2. Install Node.js to get Node Package Manager
+3. Angular CLI 
+
+Angular CLI is a command line interface too that use to initialize, develop, scaffold and maintain Angular applications.
+
+Install Angular CLI
+---------------------
+npm install -g @angular/cli@Latest
+
+-g - stands for global
+
+4. Creating a new Angular Project
+
+   ng new angular-basic-app (create a folder with project name)
+
+   1. creates a new directory
+   2. set up the folder struture for the application
+   3. Downloads and installs Angular libraries and any other dependencies
+   4. Install and configures typescript
+   5. Installs Karma & Protractor testing
+
+5. Running our new Angular project
+
+    ng serve -  to run angular project
+
+The above command compiles the Angular application and invokes the webpack development server.
+
+The server keeps a watch on project folder and if you make any changes in the code it compiles the project again.
+
+we can also use npm start ( start is a script task defined inside the package.json file)
+
+Webpack developement server listens on HTTP port 4200, we can open the browser and type https://localhost:4200
+
+
+e2e
+----
+This folder contains the files required for end to end tests by Protractor.
+
+Protractor allows us to test our application against the real browser.
+
+node_modules
+---------------
+
+All our dependencies are downloaded and copied by Node Package Manager
+
+Src
+----
+
+This is where our Application lives.
+
+App folder
+----------
+
+This angular CLI created this simple application
+
+The component
+------------------
+app.component.ts is the component that is added to the project by Angular CLI
+
+component class is the most important part of our application and it represents the view of the application.
+
+A view is a region on the screen
+
+Component consists of three main parts.
+
+1. class
+2. Class Decorator
+3. Import Statement
+
+1. Import Statement is used to import the libraries that are used in our component class
+2. This statement is similar to C# using statement
+3. Our component is decorated with @Component decorator which is part of the @angular/core module
+
+The compnent is a simple class, we define it using the export keyword
+
+Component class can have many methods and properties
+
+The main purpose of the component is to supply logic to our view.
+
+
+@Component Decorator
+--------------------
+The @Component ( called as class decorator) provides Metadata to our component.
+
+The Angular uses this meatadata to create the view
+
+Metadata normally has three fields
+
+1. selector
+2. templateUrl
+3. StyleUrls
+
+Selector
+---------
+The selector tells Angular where to display the template, inour case it is app-root
+
+The Angular whenever encounters the above tag (app-root) in the HTMl file it replaces 
+it with the template app.component.html)
+
+templateUrl
+-------------
+The templateUrl contains the path to the HTML template file.
+The angular uses this HTMl=L file to render the view
+
+StyleUrls
+------------
+This StyleUrls is an array os style sheets the angular uses to style HTMl Files
+
+DataBinding or Interpolation  (02/10/20020)
+-------------------------------------------
+
+Databnding ia a technique where the data stays in sync between the component and view.
+Whenever the user updates the data in the view angular updates the component.
+
+When component gets the new data the angular updates the view
+
+DataBinding can be classified into two groups
+
+1. One-way Binding
+2. Two-way Binding
+
+One-way Binding
+---------------
+In one-way binding data flows from one direction. Either view-to-component or 
+component-to-view
+
+
+From Component-to-View
+----------------------
+We make use of interpolation or property binding
+
+Interpolation
+--------------
+Interpolation allows us to include expressions as part of any
+string literal which we use in our HTML
+
+The Angular evaluates the expressions into a string and replaces it with the 
+original string and updates the view
+
+We can use this interpolation whene ever we use string literal in the view
+
+The Angular uses the {{ }} (double curly braces) in the template to denote 
+the interpolation
+
+syntax : {{templateExpression}}
+
+The content inside the double braces is called "Template Expression" 
+
+The Angular evaluates the template expressions and converts into string
+
+Then it replaces template expression with the result in the original string in the HTML
+
+    <span>{{firstName}}</span>
+    <span>{{lastName}}</span>
+
+The Angular replaces both {{firstName}} and {{lastName}} with the values of 
+firstName and LastName variables from the component
+
+Two-way Binding
+---------------
+The two way binding means that changes made to our model in the component those changes
+are propogated to the view and that any changes made in the view are Immediately 
+updated in the undelying component
+
+Two way data binding is iseful in the data enty forms 
+(User Registration, ay user Input forms)
+
+Whene ever user makes the change to form fields it would update our model
+similarly, when the model is updated with new data view gets updated as well.
+
+Two-way binding uses the special syatnx known as Banaa in the box [()]
+
+ngModel
+---------
+The Angular uses the ngModel directive to achieve the two-way binding on HTML 
+form elements
+
+It binds to form-elelemnts like Input, select, select area etc...
+
+The ng-model is not part of @angular/Core library ,it is part of @agular/forms library
+
+We need to import FormsModule package into our Anguar module
+
+E.g. import {FormsModule} from '@angular/forms'
+
+<input type="text" name="title" [(ngModel)]="title">
+
+Root module
+-----------
+Angular organizes the applicaton code as Angular modules
+
+These modules are closely related blocks of code in the functionality
+
+Every application must have at least ne module
+
+The module which loads first is the root module
+
+DataBinding
+---------------
+1. Interpolation
+2. Property Binding
+3. Event Binding
+4. Two-Way Binding
+
+
+Angular directives
+------------------
+Angular directives helps us to manipulate the DOM
+We can chnage the appearance, behaviour, or layout of a DOM element
+Can help us to extend our HTML 
+
+Sturctural directives
+---------------------
+*ngFor
+*ngSwitch
+*ngIf
+
+
+Attribute directives
+--------------------
+ngModel
+ngClass
+ngStyle
+
+
+ngFor
+------
+NgFor Directive iteartes over a collection of Data like an array or list etc 
+and creates HTML element for each of the items
+
+Helps us to build list or tables to display tabular data in a nicer way
+
+Syntax starts with * and that represents Angular Template Syntax
+
+*ngFor
+
+*ngSwitch
+-----------
+Which allows us to add or remove DOM elements
+
+it works in conjuntion with ngSwitchCase and ngSwitchDefault
+
+Switch(){
+    case : 
+
+    case :
+
+    default
+}
+
+<container elements [ngSwitch]="Switch Expression">
+
+    <inner element *ngSwitchCase="match expression">
+    ...
+    ....
+    <inner element *ngSwitchDefault>Default<>
+
+<Container element>
+
+Doesn't hide the elelent but removes it from DOM
+
+*ngIf
+-----
+ngIf allows us to add remove DOm element based on some conditions
+
+it can be added to any elelemnt like div, p, H1 etc..
+
+It must be prefixedwith *
+
+ngIf vs Hidden
+---------------
+ngIf does not hide the DOM element, it removes the entire element along 
+with with its subtree from DOM
+
+Hidden attribute does not remove the elelement from DOM but hides it.
+
+
+ngClass
+--------
+Adds or removes CSs Classes on a HTML element.
+
+ngClass with a String
+---------------------
+We can use string as an expression and bind it to ngClass attribute 
+
+we can add multiple classes with space between each class
+
+
+pipes
+-------
+
+Angular pipes takes data as input and formats or transform tha 
+data to diaply in our view or template
+
+we can pass arguments to pipe and chain the pipes
+The Angular allows us to create custome pipes
+
+inbuilt pipes: date pipe, number pipe, currency pipe, percentage pipe etc..
+
+Component Communication
+------------------------
+The components are useess if they don not share the data between them.
+
+The parent component communicates with child component using @input doceorator
+
+The child component can communicate with the parent by raising an event, 
+which parent can listen
+
+Pass data from Parent to child
+-------------------------------
+
+We can do this in two ways.
+
+1. using @import module 
+2. using inputs array of the @component
+
+1. Create parent and child components
+2. In the child component, import the @Input module from @angular/core
+3. Mark the property, for which we need data from parent, as Input Property
+4. Bind the child component property in the parent component 
+
+
+Pass data to Parent from child
+-------------------------------
+ There are three ways in which parent component can interact with child component.
+
+ 1. Parent listens to child 
+ 2. Parent uses the local variables to access the child 
+ 3. parent uses @ViewChild to get refrence to the child component
+
+Parent listens to child 
+-----------------------
+1. The child component exposes an EventEmitter property
+2. This property is decorated with @Output Decorator
+3. When the child component needs to communicate with parent it raises the event
+4. The parent component listens to that elelemnt and reacts to it
+
+EventEmitter
+-----------------
+1. To raise an event the component must declare an EventEmitter property
+2. The event can be emitted by calling the emit() methods
+
+Output Decorator
+----------------
+To make the event accessible from parent to compoent we must decorate 
+the property with @output decorator
+
+
+
+
+
+
+
+
+
+
+
+
+

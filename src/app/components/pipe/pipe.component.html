@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>{{title}}</h1>
+    <p>Unformatted Date : {{toDate}}</p>
+    <p>Formatted Date : {{toDate | date}}</p>
+    <p>Formatted Date with arguments : {{toDate | date :'medium'}}</p>
+    <p>Chaining the pipes : {{toDate | date:'fullDate'| uppercase}}</p>
+</div>
+
+<div class="container">
+    <h1>List of Date pipe arguments</h1>
+    <h4>Medium : </h4> {{toDate | date:'medium'}}
+    <h4>Short : </h4> {{toDate | date:'short'}}
+    <h4>FullDate : </h4> {{toDate | date:'fullDate'}}
+    <h4>LongDate : </h4> {{toDate | date:'longDate'}}
+    <h4>MediumDate : </h4> {{toDate | date:'mediumDate'}}
+    <h4>Shortdate : </h4> {{toDate | date:'shortDate'}}
+    <h4>dd-MM-y : </h4> {{toDate | date:'dd-MM-y'}}
+    <h4>dd-MM-yy HH:mm : </h4> {{toDate | date:'dd-MM-yy HH:mm'}}
+</div>
+
+<div class="container">
+    <h1>Uppercase and Lowercase</h1>
+    <p>Unformatted : {{message}}</p>
+    <p>UpperCase: {{message | uppercase}}</p>
+    <p>LowerCase: {{message | lowercase}}</p>
+</div>
+<div class="conatiner">
+    <h1>Currency Pipe</h1>
+    <p>Unformmated : {{salary}}</p>
+    <p>Unformmated : {{salary | currency : 'INR'}}</p>
+</div>
+<br><br><br>

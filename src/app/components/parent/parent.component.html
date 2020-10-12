@@ -1,0 +1,6 @@
+<h4>Welcome to {{title}} </h4>
+<button (click)="increment()" class="btn btn-primary">Increment</button>&nbsp;
+<button (click)="decrement()" class="btn btn-primary">Decrement</button>&nbsp;
+<br><br>
+<app-child [count]="counter"></app-child><br><br>
+<app-another-child [MyCount]="counter"></app-another-child>

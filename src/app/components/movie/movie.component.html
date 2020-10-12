@@ -1,0 +1,163 @@
+
+<!-- <ul>
+    <li *ngFor="let movie of movies">
+        {{movie.name}}
+        {{movie.cast}}
+        {{movie.director}}
+        {{movie.releaseDate}}
+    </li>
+</ul>
+<br><br> -->
+<div class="container">
+    <h1>ngFor</h1>
+    <p>Display List of movies</p>
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th>Id</th>
+                <th>Count</th>
+                <th>First</th>
+                <th>Last</th>
+                <th>Even</th>
+                <th>Odd</th>
+                <th>Name</th>
+                <th>Cast</th>
+                <th>Director</th>
+                <th>Release Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let movie of movies; 
+                        let Id=index;
+                        let count= count;
+                        let first=first;
+                        let last= last;
+                        let even= even;
+                        let odd=odd;                       
+                        ">
+                <td>{{Id}}</td>
+                <td>{{count}}</td>
+                <td>{{first}}</td>
+                <td>{{last}}</td>
+                <td>{{even}}</td>
+                <td>{{odd}}</td>
+                <td>{{movie.name}}</td>
+                <td>{{movie.cast}}</td>
+                <td>{{movie.director}}</td>
+                <td>{{movie.releaseDate}}</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<br><br>
+
+<div class="container">
+    <h1>ngSwitch</h1>
+
+    <input type="text" [(ngModel)]="value">
+
+    <div [ngSwitch]="value">
+        <div *ngSwitchCase="0">Display Zeroth Div</div>
+        <div *ngSwitchCase="1">Display First Div</div>
+        <div *ngSwitchCase="2">Display Second Div</div>
+        <div *ngSwitchCase="3">Display Third Div</div>
+        <div *ngSwitchCase="4">Display Fourth Div</div>
+        <div *ngSwitchCase="5">Display Fifth Div</div>
+        <div *ngSwitchDefault>This is Defaut Value</div>
+    </div>
+</div>
+<br><br>
+<div class="container">
+    <h1>ngIf</h1>
+
+    <input type="checkbox" [(ngModel)]="show" >
+
+    <div *ngIf="show">
+        This will be displayed only if checkbox is checked
+    </div>
+    <p [hidden]="!show">
+        Display the paragraph based on selection
+    </p>
+
+    <br>
+    <div *ngIf="show; else elseBlock">
+        This is if block and will be displayed if show is true
+    </div>
+    <ng-template #elseBlock>
+        This is else block and will displayed if show is false
+    </ng-template>
+    <br>
+    <div *ngIf="show; then thenBlock else elseBlock">
+        This will not be shown
+    </div>
+    <ng-template #thenBlock>
+        Then Block -This is if block and will be displayed if show is true
+    </ng-template>
+    <ng-template #elseBlock>
+        Else block - This is else block and will be displayed if show is false
+    </ng-template>
+    <br><br><br>
+</div>
+
+<div class="container">
+    <h1>Inline ngClass </h1>
+    <br>
+    <h4>ngClass using a String</h4><br>
+    <div [ngClass]="'font background'">
+        This div uses ngClass names passing as string 
+    </div>
+    <br>
+    <h4>ngClass using an Array</h4><br>
+    <div [ngClass]="['font', 'background']">
+        This div uses ngClass names passing as an Array 
+    </div>
+    <br>
+    <br>
+    <h4>ngClass with Object with true or false</h4><br>
+    <div [ngClass]="{'font': false, 'background': true}">
+        This div uses ngClass names passing as an Object 
+    </div>
+    <br>
+    <h4>ngClass with Object including null and undefined</h4><br>
+    <div [ngClass]="{'font': null, 'background': undefined}">
+        This div uses ngClass names passing as an Object 
+    </div>
+    <br><br><br>
+</div>
+<div class="container">
+    <h1>Dynamic ngClass</h1><br>
+    <h4>ngClass with a String</h4><br>
+    <div [ngClass]="cssString">
+        This div uses ngClass names passing as string 
+    </div><br>
+    <h4>ngClass using an Array</h4><br>
+    <div [ngClass]="cssArray">
+        This div uses ngClass names passing as an Array 
+    </div><br>
+    <h4>ngClass using an Object</h4><br>
+    <div [ngClass]="cssObject">
+        This div uses ngClass names passing as an Object 
+    </div><br>
+    <br><br><br>
+</div>
+<div class="container">
+    <h1>ngStyle</h1><br>
+    <div [ngStyle]="{'color': 'red','font-size':'50px'}">
+        This is div text using red color
+    </div><br>
+    <h1>ngStyle</h1><br>
+    <div [ngStyle]="{'color': textColor}">
+        This is div text using red color
+    </div><br>
+    <div [ngStyle]="{'background-color': status==='error'? 'red': 'blue', 'color':'white'}">
+        This text will be displayed in red if my status is error else 
+        will be displayed in blue
+    </div><br>
+    <div [ngStyle]="{'color':'white',
+                      'font-size':'20px',
+                      'font-weight':'bold',
+                      'background-color':'crimson'}">
+    This is DIv block with mutiple properties to ngStyle
+    </div>
+</div>
+<br><br><br>

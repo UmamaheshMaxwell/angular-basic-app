@@ -1,0 +1,25 @@
+<h1>Employee List</h1>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Skills</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employeeList">
+            <td>{{employee.name}}</td>
+            <td>{{employee.email}}</td>
+            <td>
+                <table>
+                    <tr *ngFor="let skill of employee.skills">
+                        <td>{{skill.name}}</td>
+                        <td>{{skill.exp}}</td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </tbody>
+</table>
