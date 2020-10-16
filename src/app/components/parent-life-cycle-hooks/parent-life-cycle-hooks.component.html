@@ -1,0 +1,14 @@
+<h1>{{title}}</h1>
+<p>
+    Message: <input type="text" [(ngModel)]="message">
+</p>
+<p>
+    Name: <input type="text" [(ngModel)]="name">
+</p>
+<p>
+    Code: <input type="text" [(ngModel)]="code">
+</p>
+<p>
+    <button (click)="updateCustomer()" class="btn btn-primary">Update</button>
+</p>
+<app-child-life-cycle-hooks [message]="message" [customer]="customer"></app-child-life-cycle-hooks>

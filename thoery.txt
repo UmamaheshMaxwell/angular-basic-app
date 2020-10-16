@@ -395,6 +395,55 @@ To make the event accessible from parent to compoent we must decorate
 the property with @output decorator
 
 
+Parent uses the local variables to access the child 
+----------------------------------------------------
+Parent template can access the child component properties and methods by creating a template reference variable
+
+ parent uses @ViewChild to get refrence to the child component
+ --------------------------------------------------------------
+ Injecting an instance of the child component in to the parent as a @Viewchild is the one of the ways
+
+ @ViewChild decorator takes the name of the component / directive as its input 
+
+We can use @ViewChild to decorate our property
+
+Angular then injects the reference of the component of the property
+
+Life Cycle Hooks
+-----------------
+The life cycle hoosk are the methods that angular invokes on the directives or components 
+as it creates, chnages, and destroys them.
+
+We can fine tune the behaviour of our components during its creation, updation and destruction
+
+Life Cycle Hooks
+-----------------
+Angular invokes them when a certain event occurs
+
+ngOnChanges
+ngOnInit
+ngDoCheck
+ngAfterContentInit
+ngAfterContentChecked
+ngAfterViewInit
+ngAfterViewChecked
+ngOnDestroy
+
+constructor()
+-------------
+
+Constructor is neither life cycle hook nor it is specific to Angular
+It is Javascript feature
+It is a method which is invoked when class is created
+
+Life Cycle of a component begin when Angular creates the component class
+
+First Method that gets created is class constructor
+
+ngOnChanges
+-----------
+
+
 
 
 

@@ -17,6 +17,14 @@ import { ChildComponent } from './components/child/child.component';
 import { AnotherChildComponent } from './components/another-child/another-child.component';
 import { ParentOneComponent } from './components/parent-one/parent-one.component';
 import { ChildOneComponent } from './components/child-one/child-one.component';
+import { ParentTwoComponent } from './components/parent-two/parent-two.component';
+import { ChildTwoComponent } from './components/child-two/child-two.component';
+import { ParentThreeComponent } from './components/parent-three/parent-three.component';
+import { ChildThreeComponent } from './components/child-three/child-three.component';
+import { ParentLifeCycleHooksComponent } from './components/parent-life-cycle-hooks/parent-life-cycle-hooks.component';
+import { ChildLifeCycleHooksComponent } from './components/child-life-cycle-hooks/child-life-cycle-hooks.component';
+import { ParentNgDocheckComponent } from './components/parent-ng-docheck/parent-ng-docheck.component';
+import { ChildNgDocheckComponent } from './components/child-ng-docheck/child-ng-docheck.component';
 
 @NgModule({
   declarations: [
@@ -33,7 +41,15 @@ import { ChildOneComponent } from './components/child-one/child-one.component';
     ChildComponent,
     AnotherChildComponent,
     ParentOneComponent,
-    ChildOneComponent
+    ChildOneComponent,
+    ParentTwoComponent,
+    ChildTwoComponent,
+    ParentThreeComponent,
+    ChildThreeComponent,
+    ParentLifeCycleHooksComponent,
+    ChildLifeCycleHooksComponent,
+    ParentNgDocheckComponent,
+    ChildNgDocheckComponent
   ],
   imports: [
     BrowserModule,
