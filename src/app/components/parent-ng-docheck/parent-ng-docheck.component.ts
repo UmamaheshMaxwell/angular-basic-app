@@ -19,21 +19,21 @@ export class ParentNgDocheckComponent implements OnInit {
   code=0;
 
   updateCustomer(){
-    this.customer = new Customer(); 
+    //this.customer = new Customer(); 
     this.customer.name=this.name;
     this.customer.code= this.code;
   }
 
   ngOnChanges(){
-    console.log('ngOnChanges: Life Cycle Hook')
+    console.log('Parent: ngOnChanges: Life Cycle Hook')
   }
 
   ngOnInit(): void {
-    console.log('ngOnInit: Life Cycle Hook')
+    console.log('Parent: ngOnInit: Life Cycle Hook')
   }
 
   ngDoCheck(){
-    console.log('ngDoCheck: Life Cycle Hook')
+    console.log('Parent: ngDoCheck: Life Cycle Hook')
   }
 
   // ngAfterContentInit(){

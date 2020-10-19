@@ -10,9 +10,12 @@ export class ParentOneComponent implements OnInit {
   title=" Component Interaction"
   counter =1;
   
-  constructor() { }
+  constructor() {
+    console.log('This is parent component contructor')
+   }
 
   ngOnInit(): void {
+    console.log('Parent: NgOninit')
   }
 
   countChangedHandler(count: number){

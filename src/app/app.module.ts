@@ -25,6 +25,8 @@ import { ParentLifeCycleHooksComponent } from './components/parent-life-cycle-ho
 import { ChildLifeCycleHooksComponent } from './components/child-life-cycle-hooks/child-life-cycle-hooks.component';
 import { ParentNgDocheckComponent } from './components/parent-ng-docheck/parent-ng-docheck.component';
 import { ChildNgDocheckComponent } from './components/child-ng-docheck/child-ng-docheck.component';
+import { ParentNgDestroyComponent } from './components/parent-ng-destroy/parent-ng-destroy.component';
+import { ChildNgDestroyComponent } from './components/child-ng-destroy/child-ng-destroy.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +51,9 @@ import { ChildNgDocheckComponent } from './components/child-ng-docheck/child-ng-
     ParentLifeCycleHooksComponent,
     ChildLifeCycleHooksComponent,
     ParentNgDocheckComponent,
-    ChildNgDocheckComponent
+    ChildNgDocheckComponent,
+    ParentNgDestroyComponent,
+    ChildNgDestroyComponent
   ],
   imports: [
     BrowserModule,

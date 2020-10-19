@@ -15,18 +15,20 @@ export class ChildNgDocheckComponent implements OnInit, OnChanges, DoCheck {
   oldCustomer:Customer = new Customer();
   DoCheckCount=0;
 
-  constructor() { }
+  constructor() { 
+    console.log('This is child constructor')
+  }
 
   ngOnInit(): void {
-    console.log('OnInit')
+    console.log('Child: OnInit')
   }
 
   ngOnChanges(){
-    console.log('ngOnChanges')
+    console.log('Child : ngOnChanges')
   }
 
   ngDoCheck(){
-    console.log('ngDoCheck')
+    console.log('Child : ngDoCheck')
     this.DoCheckCount++;
 
     if(this.oldCustomer.name !== this.customer.name || this.oldCustomer.code !== this.customer.code){
