@@ -445,6 +445,38 @@ ngOnChanges
 
 
 
+Angular Forms
+--------------
+The Angular forms are used to collect the data from the user
+
+1. Inititalize the form fields
+2. Capture the data from user
+3. Track the chnages
+4. Validate the inputs 
+5. display error information to the users
+
+
+1. Template Driven Forms
+------------------------
+These are simple forms which can be used to develop forms to collect the data from user. 
+
+Everything that we are going to use in the application is defined in the template
+
+Advantages
+-----------
+1. Contains less code in components
+2. esier setup
+
+Disadvantages
+----------------
+1. Difficult to add controls dynamically 
+2. unit testing is a challenge
+
+
+2. Reactive Forms
+--------------------
+
+
 
 
 
